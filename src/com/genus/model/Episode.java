@@ -8,18 +8,15 @@ public class Episode {
     private int episodeNumber;
     private String airingDate;
     private String summary;
-
-    private TvSerie tvSerie;
     private Season season;
 
     public Episode() { }
 
-    public Episode(String name, int episodeNumber, String airingDate, String summary, TvSerie tvSerie, Season season) {
+    public Episode(String name, int episodeNumber, String airingDate, String summary, Season season) {
         this.name = name;
         this.episodeNumber = episodeNumber;
         this.airingDate = airingDate;
         this.summary = summary;
-        this.tvSerie = tvSerie;
         this.season = season;
     }
 
@@ -51,12 +48,6 @@ public class Episode {
         this.summary = summary;
     }
 
-    public TvSerie getTvSerie() {
-        return tvSerie;
-    }
-    public void setTvSerie(TvSerie tvSerie) {
-        this.tvSerie = tvSerie;
-    }
 
     public Season getSeason() {
         return season;
@@ -67,6 +58,6 @@ public class Episode {
 
     @Override
     public String toString() {
-        return String.format("%s - S%sE%s - %s", tvSerie.getName(), season.getSeasonNumber(), episodeNumber, name);
+        return String.format("S%sE%s - %s", season.getSeasonNumber(), episodeNumber, name);
     }
 }

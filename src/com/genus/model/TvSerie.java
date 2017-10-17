@@ -36,4 +36,9 @@ public class TvSerie {
     public void setSeasons(List<Season> seasons) {
         this.seasons = seasons;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s",name);
+    }
 }

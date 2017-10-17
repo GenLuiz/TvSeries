@@ -36,7 +36,6 @@ public class Main {
         episode.setEpisodeNumber(1);
         episode.setName("Darth Genus");
         episode.setSeason(season);
-        episode.setTvSerie(tvSerie);
         episode.setSummary("Who is Darth Genus? check this episode and find out who is disturbing the force");
 
         List<Episode> episodes = new ArrayList<>();
@@ -45,7 +44,7 @@ public class Main {
         season.setEpisodes(episodes);
 
         System.out.println("Check the newest episode!");
-        System.out.println(episode);
+        System.out.println(tvSerie+" "+ episode);
 
     }
 }
